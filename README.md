@@ -1,6 +1,7 @@
 # behave-teamcity
 A formatter for behave to report test results to TeamCity via service messages.
-Following events will be reported
+
+## Features
 
 | behave           | TeamCity            |
 | ---              | ---                 |
