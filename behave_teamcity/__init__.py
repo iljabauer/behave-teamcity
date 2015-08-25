@@ -50,7 +50,7 @@ class TeamcityFormatter(Formatter):
                 text = ModelDescriptor.describe_docstring(self.current_step.text, None)
                 error_msg = "{}\nText:\n{}".format(error_msg, text)
 
-            error_details = self.current_step.error_message
+            error_details = step_result.error_message
 
             self.msg.testFailed(self.current_scenario.name, message=error_msg, details=error_details)
             self.msg.message('testFinished', name=self.current_scenario.name,
