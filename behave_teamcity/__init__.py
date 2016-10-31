@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from behave.formatter.base import Formatter
 from behave.model_describe import ModelDescriptor
 from teamcity import messages
@@ -41,14 +42,14 @@ class TeamcityFormatter(Formatter):
         if self.current_scenario.status == "failed":
             name = self.current_step.name
 
-            error_msg = "Step failed: {}".format(name)
+            error_msg = u"Step failed: {}".format(name)
             if self.current_step.table:
                 table = ModelDescriptor.describe_table(self.current_step.table, None)
-                error_msg = "{}\nTable:\n{}".format(error_msg, table)
+                error_msg = u"{}\nTable:\n{}".format(error_msg, table)
 
             if self.current_step.text:
                 text = ModelDescriptor.describe_docstring(self.current_step.text, None)
-                error_msg = "{}\nText:\n{}".format(error_msg, text)
+                error_msg = u"{}\nText:\n{}".format(error_msg, text)
 
             error_details = step_result.error_message
 
