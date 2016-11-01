@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='behave-teamcity',
-    version="0.1.23",
+    version="0.1.24",
     packages=['behave_teamcity', ],
     url='https://github.com/iljabauer/behave-teamcity',
     download_url='https://github.com/iljabauer/behave-teamcity/releases/tag/0.1.23',
