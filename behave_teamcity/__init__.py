@@ -32,6 +32,9 @@ class TeamcityFormatter(Formatter):
         self.current_step = step
 
     def result(self, step_result):
+        text = u'%6s %s ... ' % (step_result.keyword, step_result.name)
+        self.msg.progressMessage(text)
+        
         if self.current_scenario.status == "untested":
             return
 
